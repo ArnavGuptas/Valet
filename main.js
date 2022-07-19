@@ -18,7 +18,7 @@ function add() {
 		background_imgTag.src = background_image
 		greencar_imgTag= new Image()
 		greencar_imgTagonload = uploadgreencar
-		greencar_imgTagsrc = greencar_image
+		greencar_imgTag.src = greencar_image
 }
 
 function uploadBackground() {
@@ -28,7 +28,7 @@ function uploadBackground() {
 
 function uploadgreencar() {
 	//Define function ‘uploadgreencar’.
-	ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar.width, greencar.height)
+	ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height)
 	
 }
 
@@ -79,7 +79,7 @@ function up()
 function down()
 {
 	//Define function to move the car downward
-	if(greencar_y<=0){
+	if(greencar_y<=350){
 		greencar_y=greencar_y+10
 		uploadBackground()
 		uploadgreencar()
@@ -99,7 +99,7 @@ function left()
 function right()
 {
 	//Define function to move the car right side
-	if(greencar_x<=0){
+	if(greencar_x<=800){
 		greencar_x=greencar_x+10
 		uploadBackground()
 		uploadgreencar()
